@@ -1,0 +1,66 @@
+{
+  "hero": {
+    "greeting": "👋 Hello, I'm",
+    "title": "Web Developer & Creative Coder",
+    "description": "I create beautiful and efficient web experiences, turning ideas into reality with clean code and elegant design.",
+    "viewProjects": "View Projects",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "A little information about myself",
+    "birthday": "Birthday",
+    "zodiac": "Zodiac Sign",
+    "profession": "Profession",
+    "hobbies": "Hobbies",
+    "introduction": "Self Introduction",
+    "introductionText": "Hello! I'm a Web Developer with a passion for creating high-quality web products. With over 5 years of experience in the industry, I've had the opportunity to work on diverse projects, from corporate websites to complex web applications.",
+    "introductionText2": "I'm always seeking new challenges and opportunities to learn modern technologies. My goal is to create products that are not only beautiful but also provide the best user experience.",
+    "philosophy": "Work Philosophy",
+    "philosophyText": "\"Clean code is code that is easy to read, maintain, and extend. I believe every line of code should have a clear purpose and bring real value to users.\""
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Personal projects I've completed",
+    "demo": "Demo",
+    "code": "Code"
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Technologies and tools I use"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's connect and work together",
+    "info": "Contact Information",
+    "infoText": "I'm always ready to listen to new projects, creative ideas, or collaboration opportunities. Please contact me!",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "sendMessage": "Send Message",
+    "name": "Full Name",
+    "namePlaceholder": "Enter your full name",
+    "emailPlaceholder": "Enter your email",
+    "message": "Message",
+    "messagePlaceholder": "Enter your message",
+    "send": "Send Message",
+    "nameRequired": "Please enter your name",
+    "emailRequired": "Please enter your email",
+    "emailInvalid": "Invalid email",
+    "messageRequired": "Please enter your message",
+    "successMessage": "Thank you for contacting me! This is a demo form."
+  },
+  "footer": {
+    "description": "Web Developer passionate about creating beautiful and efficient web products.",
+    "links": "Links",
+    "social": "Social Media",
+    "copyright": "© {{ year }} Nguyễn Hồng Đức - ",
+    "madeWith": "Created by Vue.js & Vuetify"
+  },
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  }
+}
