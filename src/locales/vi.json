@@ -1,0 +1,66 @@
+{
+  "hero": {
+    "greeting": "👋 Xin chào, tôi là",
+    "title": "Web Developer & Creative Coder",
+    "description": "Tôi tạo ra những trải nghiệm web đẹp mắt và hiệu quả, biến ý tưởng thành hiện thực với code sạch và thiết kế tinh tế.",
+    "viewProjects": "Xem dự án",
+    "contact": "Liên hệ"
+  },
+  "about": {
+    "title": "Về tôi",
+    "subtitle": "Một chút thông tin về bản thân",
+    "birthday": "Ngày sinh",
+    "zodiac": "Cung hoàng đạo",
+    "profession": "Nghề nghiệp",
+    "hobbies": "Sở thích",
+    "introduction": "Giới thiệu bản thân",
+    "introductionText": "Xin chào! Tôi là một Web Developer với niềm đam mê tạo ra những sản phẩm web chất lượng cao. Với hơn 5 năm kinh nghiệm trong ngành, tôi đã có cơ hội làm việc với nhiều dự án đa dạng, từ website doanh nghiệp đến các ứng dụng web phức tạp.",
+    "introductionText2": "Tôi luôn tìm kiếm những thử thách mới và cơ hội để học hỏi các công nghệ hiện đại. Mục tiêu của tôi là tạo ra những sản phẩm không chỉ đẹp mắt mà còn mang lại trải nghiệm người dùng tốt nhất.",
+    "philosophy": "Triết lý làm việc",
+    "philosophyText": "\"Code sạch là code dễ đọc, dễ bảo trì và dễ mở rộng. Tôi tin rằng mỗi dòng code đều nên có mục đích rõ ràng và mang lại giá trị thực sự cho người dùng.\""
+  },
+  "projects": {
+    "title": "Dự án của tôi",
+    "subtitle": "Những dự án cá nhân tôi đã thực hiện",
+    "demo": "Demo",
+    "code": "Code"
+  },
+  "skills": {
+    "title": "Kỹ năng",
+    "subtitle": "Công nghệ và công cụ tôi sử dụng"
+  },
+  "contact": {
+    "title": "Liên hệ",
+    "subtitle": "Hãy kết nối và làm việc cùng nhau",
+    "info": "Thông tin liên hệ",
+    "infoText": "Tôi luôn sẵn sàng lắng nghe các dự án mới, ý tưởng sáng tạo hoặc cơ hội hợp tác. Hãy liên hệ với tôi!",
+    "email": "Email",
+    "phone": "Điện thoại",
+    "address": "Địa chỉ",
+    "sendMessage": "Gửi tin nhắn",
+    "name": "Họ tên",
+    "namePlaceholder": "Nhập họ tên của bạn",
+    "emailPlaceholder": "Nhập email của bạn",
+    "message": "Tin nhắn",
+    "messagePlaceholder": "Nhập tin nhắn của bạn",
+    "send": "Gửi tin nhắn",
+    "nameRequired": "Vui lòng nhập họ tên",
+    "emailRequired": "Vui lòng nhập email",
+    "emailInvalid": "Email không hợp lệ",
+    "messageRequired": "Vui lòng nhập tin nhắn",
+    "successMessage": "Cảm ơn bạn đã liên hệ! Đây là demo form."
+  },
+  "footer": {
+    "description": "Web Developer đam mê tạo ra những sản phẩm web đẹp mắt và hiệu quả.",
+    "links": "Liên kết",
+    "social": "Mạng xã hội",
+    "copyright": "© {{ year }} Nguyễn Hồng Đức - ",
+    "madeWith": "Được tạo bởi Vue.js & Vuetify"
+  },
+  "nav": {
+    "about": "Về tôi",
+    "projects": "Dự án",
+    "skills": "Kỹ năng",
+    "contact": "Liên hệ"
+  }
+}
