@@ -61,7 +61,8 @@ export default {
 
 <style scoped>
 .theme-switcher {
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
+  border: 1px solid rgba(var(--v-theme-surface), 0.15) !important;
 }
 
 .theme-switcher:hover {

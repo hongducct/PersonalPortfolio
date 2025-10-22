@@ -1,4 +1,4 @@
-import { createApp } from 'vue'
+import { createApp, watch } from 'vue'
 import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
@@ -85,7 +85,23 @@ const localeStore = useLocaleStore()
 themeStore.initTheme()
 localeStore.initLocale()
 
+// Sync Vuetify theme with store (similar to pod.fe approach)
+const syncVuetifyTheme = () => {
+  const vuetify = app.config.globalProperties.$vuetify
+  
+  // Watch theme changes and update Vuetify immediately
+  watch(() => themeStore.theme, (newTheme) => {
+    if (vuetify) {
+      vuetify.theme.global.name.value = newTheme
+    }
+  }, { immediate: true })
+}
+
 app.use(router)
 app.use(vuetify)
 app.use(i18n)
+
+// Initialize theme sync after Vuetify is ready
+syncVuetifyTheme()
+
 app.mount('#app')

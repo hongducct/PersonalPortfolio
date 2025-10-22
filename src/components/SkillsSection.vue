@@ -1,5 +1,5 @@
 <template>
-  <v-container id="skills" class="py-20 slate-bg">
+  <v-container id="skills" class="py-20">
     <v-row>
       <v-col cols="12">
         <div class="text-center mb-12">
@@ -43,25 +43,11 @@ export default {
 </script>
 
 <style scoped>
-.slate-bg {
-  background-color: #f8fafc;
-}
-
-.purple-text {
-  color: #7c3aed;
-}
-
-.text-gray-600 {
-  color: #64748b;
-}
-
-.text-gray-900 {
-  color: #111827;
-}
-
 .skill-card {
   height: 100%;
   transition: box-shadow 0.3s ease;
+  /* background color màu xanh pastel */
+  background-color: #f6fbff;
 }
 
 .skill-card:hover {
@@ -118,10 +104,10 @@ export default {
 }
 
 .skill-item {
-  color: #64748b;
+  color: rgba(var(--v-theme-on-background));
   font-size: 0.875rem;
   padding: 4px 12px;
-  background-color: #f8fafc;
+  background-color: rgba(var(--v-theme-background), 0.5);
   border-radius: 6px;
   transition: background-color 0.3s ease;
 }
