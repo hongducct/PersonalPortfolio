@@ -61,6 +61,79 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Optimize theme transitions - only for specific elements */
+.v-btn, .v-card, .v-chip, .v-icon, .v-card-subtitle, .v-card-text {
+  transition: background-color 0.1s ease, color 0.1s ease, border-color 0.1s ease !important;
+}
+
+/* Disable transitions for VCardTitle completely */
+.v-card-title,
+.v-card-title *,
+.v-card-title::before,
+.v-card-title::after {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* Force override for all VCardTitle variants */
+[class*="v-card-title"],
+[class*="v-card-title"] * {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* Nuclear option - disable ALL transitions globally */
+* {
+  transition: none !important;
+}
+
+/* Override Vuetify CSS variables */
+:root {
+  --v-transition-duration: 0s !important;
+  --v-transition-timing-function: ease !important;
+}
+
+/* Force override Vuetify transitions */
+.v-application * {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* Re-enable transitions only for specific elements that need them */
+.v-btn:not(.theme-changing),
+.v-card:not(.theme-changing),
+.v-chip:not(.theme-changing),
+.v-icon:not(.theme-changing),
+.v-card-subtitle:not(.theme-changing),
+.v-card-text:not(.theme-changing) {
+  transition: background-color 0.1s ease, color 0.1s ease, border-color 0.1s ease !important;
+}
+
+/* Disable all transitions during theme change */
+.theme-changing,
+.theme-changing * {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* Force disable transitions for specific problematic elements */
+.theme-changing .v-card-title,
+.theme-changing .v-card-subtitle,
+.theme-changing .v-card-text,
+.theme-changing .v-btn,
+.theme-changing .v-chip,
+.theme-changing .project-title {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* Additional targeting for VCardTitle component */
+.theme-changing .v-card-title,
+.theme-changing .v-card-title * {
+  transition: none !important;
+  animation: none !important;
+}
+
 /* Typography improvements */
 h1,
 h2,

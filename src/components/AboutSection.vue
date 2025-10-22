@@ -1,5 +1,5 @@
 <template>
-  <v-container id="about" class="py-20 slate-bg">
+  <v-container id="about" class="py-20">
     <v-row>
       <v-col cols="12">
         <div class="text-center mb-12">
@@ -35,7 +35,7 @@
                   <v-icon color="purple" class="mr-3">mdi-star</v-icon>
                   <div>
                     <span>{{ $t('about.zodiac') }}: </span>
-                    <span>{{ personalData.basicInfo.zodiac }}</span>
+                    <span>{{ t('about.' + personalData.basicInfo.zodiac) }}</span>
                   </div>
                 </div>
 
@@ -84,49 +84,20 @@
 
 <script>
 import { personalData } from '@/config/personalData'
-
+import { useI18n } from 'vue-i18n'
 export default {
   name: 'AboutSection',
   data() {
     return {
       personalData,
+      t: useI18n().t,
     }
   },
 }
 </script>
 
 <style scoped>
-.slate-bg {
-  background-color: #f8fafc;
-}
-
-.purple-text {
-  color: #7c3aed;
-}
-
-.text-gray-600 {
-  color: #64748b;
-}
-
-.text-gray-700 {
-  color: #374151;
-}
-
-.text-gray-900 {
-  color: #111827;
-}
-
 .purple-gradient {
-  background: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%);
-}
-
-.space-y-4 > * + * {
-  margin-top: 16px;
-}
-
-.shadow-lg {
-  box-shadow:
-    0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #ad94d8 0%, #e673ac 100%);
 }
 </style>

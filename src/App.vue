@@ -1,45 +1,26 @@
 <template>
-  <v-app>
-    <!-- Header with Theme and Language Switchers -->
-    <v-app-bar
-      :elevation="0"
-      :color="isDark ? 'surface' : 'background'"
-      class="header-bar"
-      height="56"
-      :class="{ 'dark-header': isDark }"
-    >
-      <v-container class="d-flex align-center justify-space-between pa-4">
-        <div class="d-flex align-center">
-          <v-avatar size="32" class="purple-gradient mr-3">
-            <span class="text-white text-caption font-weight-bold">{{
-              personalData.basicInfo.initials
-            }}</span>
-          </v-avatar>
-          <h4 class="text-subtitle-1 font-weight-bold mb-0">
-            {{ personalData.basicInfo.name }}
-          </h4>
-        </div>
-
-        <div class="d-flex align-center gap-2">
-          <!-- Language Switcher -->
-          <LanguageSwitcher :size="'small'" :color="isDark ? 'white' : 'gray-600'" />
-
-          <!-- Theme Switcher -->
-          <ThemeSwitcher :size="'small'" :color="isDark ? 'white' : 'gray-600'" />
-        </div>
-      </v-container>
-    </v-app-bar>
+  <VApp>
+    <!-- Fixed Theme and Language Switchers -->
+    <div class="fixed-switchers">
+      <div class="switcher-container">
+        <!-- Language Switcher -->
+        <LanguageSwitcher :size="'small'" :color="isDark ? 'white' : 'text-gray-300'" />
+        
+        <!-- Theme Switcher -->
+        <ThemeSwitcher :size="'small'" :color="isDark ? 'white' : 'text-gray-300'" />
+      </div>
+    </div>
 
     <!-- Main Content -->
-    <v-main>
+    <VMain>
       <HeroSection />
       <AboutSection />
       <ProjectsSection />
       <SkillsSection />
       <ContactSection />
       <Footer />
-    </v-main>
-  </v-app>
+    </VMain>
+  </VApp>
 </template>
 
 <script>
@@ -86,65 +67,14 @@ body,
   font-family: 'Roboto', sans-serif;
 }
 
-/* Custom styles to match the original design */
-.purple-gradient {
-  background: linear-gradient(135deg, #1e1b4b 0%, #7c3aed 50%, #1e1b4b 100%);
-}
-
-.purple-text {
-  color: #7c3aed;
-}
-
-.purple-bg {
-  background-color: #7c3aed;
-}
-
-.purple-bg-light {
-  background-color: rgba(124, 58, 237, 0.1);
-}
-
-.purple-border {
-  border-color: rgba(124, 58, 237, 0.3);
-}
-
-.slate-bg {
-  background-color: #f8fafc;
-}
-
-.slate-dark {
-  background-color: #0f172a;
-}
-
-.text-gray-600 {
-  color: #64748b;
-}
-
-.text-gray-300 {
-  color: #cbd5e1;
-}
-
-.text-gray-400 {
-  color: #94a3b8;
-}
-
-.text-gray-700 {
-  color: #374151;
-}
-
-.text-gray-900 {
-  color: #111827;
-}
-
-.bounce-animation {
-  animation: bounce 1s infinite;
-}
-
 @keyframes bounce {
+
   0%,
   100% {
     animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
     transform: translateY(-25%);
   }
+
   50% {
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     transform: none;
@@ -161,5 +91,61 @@ body,
     0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 8px 10px -6px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
+}
+
+/* Fixed Switchers Styles */
+.fixed-switchers {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.switcher-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(var(--v-theme-surface), 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(var(--v-theme-surface), 0.2) !important;
+  border-radius: 50px;
+  padding: 8px 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.v-theme--light .switcher-container {
+  border: 1px solid rgba(var(--v-theme-on-surface), 0.15) !important;
+}
+
+.switcher-container:hover {
+  background: rgba(124, 58, 237, 0.2);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.2);
+}
+
+/* Dark mode styles for switchers */
+.v-application.dark .switcher-container {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.v-application.dark .switcher-container:hover {
+  background: rgba(124, 58, 237, 0.3);
+  border: 1px solid rgba(124, 58, 237, 0.4);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .fixed-switchers {
+    top: 15px;
+    right: 15px;
+  }
+  
+  .switcher-container {
+    padding: 6px 10px;
+    gap: 6px;
+  }
 }
 </style>

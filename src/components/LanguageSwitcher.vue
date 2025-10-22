@@ -6,9 +6,8 @@
     :class="buttonClass"
     @click="toggleLanguage"
     :title="isVietnamese ? 'Switch to English' : 'Chuyển sang Tiếng Việt'"
-    icon
   >
-    <VIcon>{{ isVietnamese ? 'mdi-flag' : 'mdi-flag-variant' }}</VIcon>
+    {{ isVietnamese ? 'VI' : 'EN' }}
   </VBtn>
 </template>
 
@@ -59,7 +58,11 @@ export default {
 .language-switcher {
   transition: all 0.3s ease;
   font-weight: 600;
-  min-width: 48px;
+  max-width: 40px !important;
+  height: 40px !important;
+  color: white !important;
+  background-color: rgba(124, 58, 237, 0.2) !important;
+  border: 1px solid rgba(var(--v-theme-surface), 0.15) !important;
 }
 
 .language-switcher:hover {
