@@ -12,14 +12,14 @@
     </div>
 
     <!-- Main Content -->
-    <VMain>
-      <HeroSection />
+    <HeroSection />
+    <VMain class="main-content">
       <AboutSection />
       <ProjectsSection />
       <SkillsSection />
       <ContactSection />
-      <Footer />
     </VMain>
+    <Footer />
   </VApp>
 </template>
 
@@ -136,7 +136,20 @@ body,
   border: 1px solid rgba(124, 58, 237, 0.4);
 }
 
+/* Main content spacing */
+.main-content {
+  padding-left: 20rem !important;
+  padding-right: 20rem !important;
+}
+
 /* Responsive design */
+@media (max-width: 1500px) {
+  .main-content {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+}
+
 @media (max-width: 768px) {
   .fixed-switchers {
     top: 15px;
@@ -146,6 +159,18 @@ body,
   .switcher-container {
     padding: 6px 10px;
     gap: 6px;
+  }
+  
+  .main-content {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
   }
 }
 </style>
