@@ -1,17 +1,17 @@
 <template>
-  <v-container fluid class="hero-section pa-0">
-    <v-row no-gutters class="fill-height">
-      <v-col cols="12">
+  <VContainer fluid class="hero-section pa-0">
+    <VRow no-gutters class="fill-height">
+      <VCol cols="12" class="d-flex align-center justify-center">
         <div class="hero-content">
           <div class="hero-badge mb-4">
-            <v-chip
-              color="purple"
+            <VChip
+              color="rgb(var(--v-theme-surface), 0.6)"
               variant="outlined"
-              class="purple-border purple-text"
+              class="purple-border font-weight-bold"
               size="large"
             >
               {{ $t('hero.greeting') }}
-            </v-chip>
+            </VChip>
           </div>
 
           <h1 class="hero-title text-white mb-4">{{ personalData.basicInfo.name }}</h1>
@@ -23,10 +23,10 @@
           </p>
 
           <div class="hero-buttons mb-8">
-            <v-btn color="purple" size="large" class="mr-4" @click="scrollToSection('projects')">
+            <VBtn color="purple" size="large" class="mr-4" @click="scrollToSection('projects')">
               {{ $t('hero.viewProjects') }}
-            </v-btn>
-            <v-btn
+            </VBtn>
+            <VBtn
               variant="outlined"
               color="purple"
               size="large"
@@ -34,11 +34,11 @@
               @click="scrollToSection('contact')"
             >
               {{ $t('hero.contact') }}
-            </v-btn>
+            </VBtn>
           </div>
 
           <div class="hero-social">
-            <v-btn
+            <VBtn
               v-for="social in personalData.socialLinks"
               :key="social.name"
               icon
@@ -49,22 +49,22 @@
               target="_blank"
               :title="social.name"
             >
-              <v-icon>{{ social.icon }}</v-icon>
-            </v-btn>
+              <VIcon>{{ social.icon }}</VIcon>
+            </VBtn>
           </div>
         </div>
 
-        <v-btn
+        <VBtn
           icon
           color="purple-300"
           class="scroll-down bounce-animation"
           @click="scrollToSection('about')"
         >
-          <v-icon size="32">mdi-chevron-down</v-icon>
-        </v-btn>
-      </v-col>
-    </v-row>
-  </v-container>
+          <VIcon size="32">mdi-chevron-down</VIcon>
+        </VBtn>
+      </VCol>
+    </VRow>
+  </VContainer>
 </template>
 
 <script>
@@ -228,7 +228,6 @@ export default {
 .scroll-down {
   position: absolute;
   bottom: 40px;
-  left: 50%;
   transform: translateX(-50%);
   z-index: 10;
   width: 48px !important;

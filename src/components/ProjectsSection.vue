@@ -9,7 +9,7 @@
 
         <v-row>
           <v-col v-for="project in projects" :key="project.id" cols="12" md="6" lg="4">
-            <v-card class="project-card hover-shadow transition-all duration-300" elevation="2">
+            <v-card class="project-card hover-shadow" elevation="2">
               <div class="project-image-container">
                 <v-img
                   :src="project.image"
@@ -22,52 +22,56 @@
                 </v-img>
               </div>
 
-              <v-card-title class="project-title">
+              <VCardTitle class="project-title">
                 {{ project.title }}
-              </v-card-title>
+              </VCardTitle>
 
               <v-card-subtitle class="project-description">
                 {{ project.description }}
               </v-card-subtitle>
 
-              <v-card-text>
-                <div class="d-flex flex-wrap gap-2 mb-4">
-                  <v-chip
-                    v-for="tag in project.tags"
-                    :key="tag"
-                    color="purple"
-                    variant="outlined"
-                    size="small"
-                    class="purple-chip"
-                  >
-                    {{ tag }}
-                  </v-chip>
+              <v-card-text class="card-content">
+                <div class="content-wrapper">
+                  <div class="d-flex flex-wrap gap-2 mb-4">
+                    <VChip
+                      v-for="tag in project.tags"
+                      :key="tag"
+                      color="purple"
+                      variant="outlined"
+                      size="small"
+                      class="purple-chip mr-1 mb-1"
+                    >
+                      {{ tag }}
+                    </VChip>
+                  </div>
                 </div>
 
-                <div class="d-flex gap-2">
-                  <v-btn
-                    color="purple"
-                    size="small"
-                    class="flex-grow-1"
-                    :href="project.link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <v-icon start>mdi-open-in-new</v-icon>
-                    {{ $t('projects.demo') }}
-                  </v-btn>
-                  <v-btn
-                    variant="outlined"
-                    color="purple"
-                    size="small"
-                    class="flex-grow-1"
-                    :href="project.github"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <v-icon start>mdi-github</v-icon>
-                    {{ $t('projects.code') }}
-                  </v-btn>
+                <div class="buttons-container">
+                  <div class="d-flex gap-1">
+                    <VBtn
+                      color="purple"
+                      size="small"
+                      class="flex-grow-1 mr-2"
+                      :href="project.link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <v-icon start>mdi-open-in-new</v-icon>
+                      {{ $t('projects.demo') }}
+                    </VBtn>
+                    <VBtn
+                      variant="outlined"
+                      color="purple"
+                      size="small"
+                      class="flex-grow-1"
+                      :href="project.github"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <v-icon start>mdi-github</v-icon>
+                      {{ $t('projects.code') }}
+                    </VBtn>
+                  </div>
                 </div>
               </v-card-text>
             </v-card>
@@ -92,18 +96,11 @@ export default {
 </script>
 
 <style scoped>
-.purple-text {
-  color: #7c3aed;
-}
-
-.text-gray-600 {
-  color: #64748b;
-}
-
 .project-card {
   height: 100%;
-  transition: all 0.3s ease;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
@@ -141,8 +138,17 @@ export default {
 .project-title {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #111827;
-  transition: color 0.3s ease;
+  transition: none !important;
+  animation: none !important;
+}
+
+/* Force disable all transitions for project title */
+.project-title,
+.project-title *,
+.project-title::before,
+.project-title::after {
+  transition: none !important;
+  animation: none !important;
 }
 
 .project-card:hover .project-title {
@@ -164,21 +170,23 @@ export default {
   background-color: rgba(124, 58, 237, 0.2) !important;
 }
 
-.hover-shadow:hover {
-  box-shadow:
-    0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+/* Card content layout */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 16px !important;
 }
 
-.hover-scale:hover {
-  transform: scale(1.05);
+.content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.transition-all {
-  transition: all 0.3s ease;
+.buttons-container {
+  margin-top: auto;
+  padding-top: 16px;
 }
 
-.duration-300 {
-  transition-duration: 0.3s;
-}
 </style>
