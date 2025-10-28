@@ -27,5 +27,5 @@ export default {
     },
   },
 }
-console.log(import.meta.env.VITE_PRIMARY_COLOR)
+console.log('primary color: ', import.meta.env.VITE_PRIMARY_COLOR)
 </script>
