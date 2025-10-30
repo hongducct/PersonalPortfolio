@@ -5,7 +5,7 @@
       <div class="switcher-container">
         <!-- Language Switcher -->
         <LanguageSwitcher :size="'small'" :color="isDark ? 'white' : 'text-gray-300'" />
-        
+
         <!-- Theme Switcher -->
         <ThemeSwitcher :size="'small'" :color="isDark ? 'white' : 'text-gray-300'" />
       </div>
@@ -68,7 +68,6 @@ body,
 }
 
 @keyframes bounce {
-
   0%,
   100% {
     animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
@@ -155,12 +154,12 @@ body,
     top: 15px;
     right: 15px;
   }
-  
+
   .switcher-container {
     padding: 6px 10px;
     gap: 6px;
   }
-  
+
   .main-content {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
