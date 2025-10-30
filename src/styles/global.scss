@@ -62,8 +62,16 @@ html {
 }
 
 /* Optimize theme transitions - only for specific elements */
-.v-btn, .v-card, .v-chip, .v-icon, .v-card-subtitle, .v-card-text {
-  transition: background-color 0.1s ease, color 0.1s ease, border-color 0.1s ease !important;
+.v-btn,
+.v-card,
+.v-chip,
+.v-icon,
+.v-card-subtitle,
+.v-card-text {
+  transition:
+    background-color 0.1s ease,
+    color 0.1s ease,
+    border-color 0.1s ease !important;
 }
 
 /* Disable transitions for VCardTitle completely */
@@ -76,8 +84,8 @@ html {
 }
 
 /* Force override for all VCardTitle variants */
-[class*="v-card-title"],
-[class*="v-card-title"] * {
+[class*='v-card-title'],
+[class*='v-card-title'] * {
   transition: none !important;
   animation: none !important;
 }
@@ -96,7 +104,7 @@ html {
 /* Force override Vuetify transitions */
 .v-application * {
   transition: none !important;
-  animation: none !important;
+  // animation: none !important;
 }
 
 /* Re-enable transitions only for specific elements that need them */
@@ -106,7 +114,10 @@ html {
 .v-icon:not(.theme-changing),
 .v-card-subtitle:not(.theme-changing),
 .v-card-text:not(.theme-changing) {
-  transition: background-color 0.1s ease, color 0.1s ease, border-color 0.1s ease !important;
+  transition:
+    background-color 0.1s ease,
+    color 0.1s ease,
+    border-color 0.1s ease !important;
 }
 
 /* Disable all transitions during theme change */

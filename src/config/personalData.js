@@ -33,26 +33,56 @@ export const personalData = {
       id: 1,
       title: 'Booking Tour Website',
       description:
-      'Website booking tour với giao diện trực quan, hỗ trợ lịch trình tour, đặt tour, xem thông tin khách sạn, xem vé máy bay, thanh toán và quản lý đơn hàng, AI Chatbot.',
+        'Website booking tour với giao diện trực quan, hỗ trợ lịch trình tour, đặt tour, xem thông tin khách sạn, xem vé máy bay, thanh toán và quản lý đơn hàng, AI Chatbot.',
       image:
-      'https://images.unsplash.com/photo-1758598497143-84a0cfdc9958?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBhcHBsaWNhdGlvbnxlbnwxfHx8fDE3NjA5NTE5NjF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      tags: ['VueJS', 'Laravel', 'MySQL','Tailwind CSS', 'Google Map API', 'VNPAY API', 'Google Auth API', 'SendGrid API'],
+        'https://images.unsplash.com/photo-1758598497143-84a0cfdc9958?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBhcHBsaWNhdGlvbnxlbnwxfHx8fDE3NjA5NTE5NjF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      tags: [
+        'VueJS',
+        'Laravel',
+        'MySQL',
+        'Tailwind CSS',
+        'Google Map API',
+        'VNPAY API',
+        'Google Auth API',
+        'SendGrid API',
+      ],
       link: 'https://bookingtour.hongducct.id.vn',
       github: 'https://github.com/hongducct/tour_booking_vue',
     },
     {
       id: 2,
+      title: 'Family Tree Management Website',
+      description:
+        'Website quản lý gia phả với tính năng quản lý thành viên, quan hệ gia phả, lịch sử gia phả, và các tính năng khác.',
+      image:
+        'https://res.cloudinary.com/dlhra4ihw/image/upload/v1761798823/blank-family-tree-template_tz1va3.png',
+      tags: ['VueJS', 'NestJS', 'PostgreSQL', 'Tailwind CSS', 'Vuetify', 'OpenAI API'],
+      link: 'https://familytree.hongducct.id.vn',
+      github: 'https://github.com/hongducct/family_tree',
+    },
+    {
+      id: 3,
+      title: 'DLuLu Notes Web App',
+      description:
+        'Ứng dụng ghi chú với tính năng quản lý ghi chú, tạo ghi chú, xem ghi chú, và các tính năng khác.',
+      image:
+        'https://images.unsplash.com/photo-1658297063569-162817482fb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjB3ZWJzaXRlfGVufDF8fHx8MTc2MDg2NTQ4MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      tags: ['VueJS', 'NestJS', 'PostgreSQL', 'Tailwind CSS', 'Vuetify', 'OpenAI API'],
+      link: 'https://dlulu.hongducct.id.vn',
+      github: 'https://github.com/hongducct/dlulu-noteapp-vue',
+    },
+    {
+      id: 4,
       title: 'E-Commerce Watch Website',
       description:
         'Website thương mại điện tử với tính năng quản lý sản phẩm, giỏ hàng, thanh toán và quản lý đơn hàng.',
-      image:
-        'https://images.unsplash.com/photo-1658297063569-162817482fb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjB3ZWJzaXRlfGVufDF8fHx8MTc2MDg2NTQ4MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      tags: ['VueJS', 'Laravel', 'MySQL','Tailwind CSS', 'SEPAY API', 'SendGrid API'],
+      image: 'https://res.cloudinary.com/dlhra4ihw/image/upload/v1761798918/watch_c90ta1.webp',
+      tags: ['VueJS', 'Laravel', 'MySQL', 'Tailwind CSS', 'SEPAY API', 'SendGrid API'],
       link: '#',
       github: 'https://github.com/hongducct/watch-eCommerce-using-laravel-vuejs',
     },
     {
-      id: 3,
+      id: 5,
       title: 'Product Management App Mobile',
       description:
         'Ứng dụng quản lý sản phẩm với giao diện trực quan, hỗ trợ quản lý sản phẩm, người dùng',
