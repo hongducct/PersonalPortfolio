@@ -146,6 +146,12 @@ export const personalData = {
       url: 'mailto:hongducct23@gmail.com',
       color: 'gray-300',
     },
+    {
+      name: 'Facebook',
+      icon: 'mdi-facebook',
+      url: 'https://facebook.com/hongducct',
+      color: 'gray-300',
+    },
   ],
 
   // Navigation links

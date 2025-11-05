@@ -2,14 +2,14 @@
   <VFooter class="slate-dark py-12">
     <VContainer>
       <VRow>
-        <VCol cols="12" md="4">
+        <VCol cols="12" md>
           <h3 class="mb-4">{{ personalData.basicInfo.name }}</h3>
           <p class="text-gray-400">
             {{ $t('footer.description') }}
           </p>
         </VCol>
 
-        <VCol cols="12" md="4">
+        <VCol cols="12" md>
           <h3 class="mb-4">{{ $t('footer.links') }}</h3>
           <ul class="footer-links">
             <li v-for="link in personalData.navLinks" :key="link.name">
@@ -20,9 +20,9 @@
           </ul>
         </VCol>
 
-        <VCol cols="12" md="4">
+        <VCol cols="12" md="auto">
           <h3 class="mb-4">{{ $t('footer.social') }}</h3>
-          <div class="d-flex gap-2">
+          <div class="d-flex">
             <VBtn
               v-for="social in personalData.socialLinks"
               :key="social.name"
@@ -32,7 +32,7 @@
               :href="social.url"
               target="_blank"
               rel="noopener noreferrer"
-              class="social-btn"
+              class="social-btn mr-1"
               :title="social.name"
             >
               <VIcon>{{ social.icon }}</VIcon>
@@ -46,7 +46,7 @@
       <div class="text-center text-gray-400">
         <p class="d-flex align-center justify-center mb-0">
           {{ `© ${new Date().getFullYear()} Nguyễn Hồng Đức - ` }}
-          <VIcon color="red" size="16" class="mx-1">mdi-heart </VIcon>
+          <VIcon color="red" size="16" class="mx-1">mdi-heart</VIcon>
           {{ $t('footer.madeWith') }}
         </p>
       </div>
