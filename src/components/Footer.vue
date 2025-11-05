@@ -108,4 +108,8 @@ export default {
 .border-gray-800 {
   border-color: #1f2937 !important;
 }
+.v-container {
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
 </style>
