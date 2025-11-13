@@ -51,6 +51,25 @@ export const personalData = {
     },
     {
       id: 2,
+      title: 'Booking Bus Ticket Website',
+      description:
+        'Website booking ticket: đặt vé xe khách, (admin-user), admin quản lý vé (xác nhận), tạo chuyến đi, số lượng vé, user đặt vé xe, thanh toán và xem lịch sử đơn vé của mình',
+      image: 'https://cdn.tgdd.vn/News/1564980/Muavexekhach-1280x720.jpg',
+      tags: [
+        'VueJS',
+        'Laravel',
+        'MySQL',
+        'Tailwind CSS',
+        'Google Map API',
+        'VNPAY API',
+        'Google Auth API',
+        'SendGrid API',
+      ],
+      link: 'https://bookingtour.hongducct.id.vn',
+      github: 'https://github.com/hongducct/tour_booking_vue',
+    },
+    {
+      id: 3,
       title: 'Family Tree Management Website',
       description:
         'Website quản lý gia phả với tính năng quản lý thành viên, quan hệ gia phả, lịch sử gia phả, và các tính năng khác.',
@@ -61,7 +80,7 @@ export const personalData = {
       github: 'https://github.com/hongducct/family_tree',
     },
     {
-      id: 3,
+      id: 4,
       title: 'DLuLu Notes Web App',
       description:
         'Ứng dụng ghi chú với tính năng quản lý ghi chú, tạo ghi chú, xem ghi chú, và các tính năng khác.',
@@ -72,7 +91,7 @@ export const personalData = {
       github: 'https://github.com/hongducct/dlulu-noteapp-vue',
     },
     {
-      id: 4,
+      id: 5,
       title: 'E-Commerce Watch Website',
       description:
         'Website thương mại điện tử với tính năng quản lý sản phẩm, giỏ hàng, thanh toán và quản lý đơn hàng.',
@@ -82,7 +101,7 @@ export const personalData = {
       github: 'https://github.com/hongducct/watch-eCommerce-using-laravel-vuejs',
     },
     {
-      id: 5,
+      id: 6,
       title: 'Product Management App Mobile',
       description:
         'Ứng dụng quản lý sản phẩm với giao diện trực quan, hỗ trợ quản lý sản phẩm, người dùng',
